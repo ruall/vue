@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.set全局操作</title>
+    <script src="/assets/js/vue.js"></script>
+</head>
+<body>
+    <br/>
+    <div id="app">
+        {{data}}
+        <ul>
+            <li v-for="item in arr">{{item}}</li>
+        </ul>
+    </div>
+    <input type="button" value="加" onclick="add()">
+
+    <script>
+        function add(){
+            // Vue.set(dataCount,'data',2);//方法一
+            // app.data++;//方法二
+            // dataCount.data++;//方法三
+            // app.arr[0]='aa';
+            Vue.set(dataCount.arr,'1','dd');
+        }
+        var dataCount= {
+            data:1,
+            count:'car',
+            arr:['a','b','c'],
+        }
+
+        var app = new Vue({
+            el:"#app",
+            data:dataCount,
+        });
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue.directive自定义指令实例</title>
+    <script src="/assets/js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span v-test="color">num：{{num1}}</span>
+        <button @click="add">加</button>
+        <button @click="del">减</button>
+        <input type="text" @keyup.enter="onEnter" v-model="num2">
+    </div>
+    <br/>
+    <button onclick="unbind()">解绑</button>
+
+    <script>
+        function unbind(){
+            app.$destroy();
+        }
+        /*Vue.directive('test',function(el,binding){
+            el.style='color:'+binding.value;
+        });*/
+        Vue.directive('test',{
+            bind:function(el,binding){//被绑定
+                el.style='color:'+binding.value;
+                console.log('1 - bind');
+            },
+            inserted:function(){//绑定到节点
+                console.log('2 - inserted');
+            },
+            update:function(){//组件更新
+                console.log('3 - update');
+            },
+            componentUpdated:function(){//组件更新完成
+                console.log('4 - componentUpdated');
+            },
+            unbind:function(){//解绑
+                console.log('5 - unbind');
+            }
+
+        });
+        var app = new Vue({
+            el:'#app',
+            data:{
+                num1:0,
+                num2:1,
+                color:'red',
+            },
+            methods:{
+                add:function(){
+                    return this.num1++;
+                },
+                del:function(){
+                    return this.num1--;
+                },
+                onEnter:function(){
+                    return this.num1 + this.num2;
+                }
+            },
+        });
+    </script>
+</body>
+</html>

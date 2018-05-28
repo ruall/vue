@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-on实例</title>
+    <script src="/assets/js/vue.js"></script>
+</head>
+<body>
+    <div id="app">
+        <span>num：{{num1}}</span>
+        <button @click="add">加</button>
+        <button @click="del">减</button>
+        <input type="text" @keyup.enter="onEnter" v-model="num2">
+    </div>
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                num1:0,
+                num2:1,
+            },
+            methods:{
+                add:function(){
+                    return this.num1++;
+                },
+                del:function(){
+                    return this.num1--;
+                },
+                onEnter:function(){
+                    return this.num1 + this.num2;
+                }
+            },
+        });
+    </script>
+</body>
+</html>

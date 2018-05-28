@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue-component初始组件</title>
+    <script src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <hr>
+    <div id='app'>
+        <complate :is="test"></complate>
+        <button @click="change">change</button>
+    </div>
+
+    <script type="text/javascript">
+        var test1 = {
+            template:'<div style="color: green;">test1</div>',
+        },
+        test2 = {
+            template:'<div style="color: green;">test2</div>',
+        },
+        test3 = {
+            template:'<div style="color: green;">test3</div>',
+        };
+
+        var app = new Vue({
+            el : '#app',
+            data:{
+                message:'hello',
+                test:'test2',
+            },
+            components:{
+                'test1':test1,
+                'test2':test2,
+                'test3':test3,
+            },
+            methods:{
+                change(){
+                    if(this.test=='test1'){
+                        this.test='test2';
+                    }else if(this.test=='test2'){
+                        this.test='test3';
+                    }else{
+                        this.test='test1';
+                    }
+                },
+            },
+
+        });
+    </script>
+</body>
+</html>

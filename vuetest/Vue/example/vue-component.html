@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vue-component初始组件</title>
+    <script src="../assets/js/vue.js"></script>
+</head>
+<body>
+    <hr>
+    <div id='app'>
+        <aaa></aaa>
+        <bbb></bbb>
+    </div>
+
+    <script type="text/javascript">
+        Vue.component('aaa',{
+            template:`<h3 style="color:red">全局组件</h3>`,
+        });
+        var app = new Vue({
+            el : '#app',
+            data:{
+                message:'hello',
+            },
+            components:{
+                'bbb':{
+                    template:`<h3 style="color:blue">局部组件</h3>`,
+                },
+            }
+
+        });
+    </script>
+</body>
+</html>

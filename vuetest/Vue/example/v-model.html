@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>v-model实例</title>
+    <script src="/assets/js/vue.js"></script>
+</head>
+<body>
+    <div id='app'>
+        <p>{{message}}</p>
+        <p>v-model:<input type="text" v-model="message"></p>
+        <p>v-model.lazy:<input type="text" v-model.lazy="message"></p>
+        <p>v-model.number:<input type="text" v-model.number="message"></p>
+        <p>v-model.number:<input type="text" v-model.trim="message"></p>
+
+        <hr/>
+        <p>多选框绑定一个值</p>
+        <input type="checkbox" id="isTrue" v-model="isTrue">
+        <label for="isTrue">{{isTrue}}</label>
+
+        <hr/>
+        <p>多选框绑定一个数组</p>
+        <input type="checkbox" value="name1" id="name1" v-model="name">
+        <label for="aa">name1</label>
+        <input type="checkbox" value="name2" id="name2" v-model="name">
+        <label for="aa">name2</label>
+        <input type="checkbox" value="name3" id="name3" v-model="name">
+        <label for="aa">name3</label>
+        <p>{{name}}</p>
+
+        <hr/>
+        <p>单选框绑定数值</p>
+        <input type="radio" value="男" name="sex" v-model="sex">
+        <label for="sex1">男</label>
+        <input type="radio" value="女" name="sex" v-model="sex">
+        <label for="sex1">女</label>
+        <p>性别：{{sex}}</p>
+    </div>
+    
+    <script>
+        var app = new Vue({
+            el:'#app',
+            data:{
+                message:'aaa',
+                isTrue:true,
+                name:[],
+                sex:'女',
+            }
+        });
+    </script>
+
+</body>
+</html>

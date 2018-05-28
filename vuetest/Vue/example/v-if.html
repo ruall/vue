@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="/assets/js/vue.js"></script>
+    <title>v-if实例</title>
+</head>
+<body>
+    <div class="app">
+        <span v-if="isLogin">欢迎您！</span>
+        <span v-else>请登录</span>
+        <span v-show="isLogin">显示</span>
+    </div>
+    <script>
+        var app = new Vue({
+            el : '.app',
+            data : {
+                isLogin : false,
+            },
+        });
+    </script>
+</body>
+</html>
