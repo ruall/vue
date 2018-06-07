@@ -6,6 +6,7 @@
       <router-link to="/hi">Hi页面</router-link>
       <router-link :to="{name:'Hi1',params:{username:'test1'}}">Hi1页面</router-link>
       <router-link :to="{name:'Hi2',params:{username:'test2'}}">Hi2页面</router-link>
+      <router-link to="/params/111/多撒点">Params页面</router-link>
     </div>
     <div>{{$route.name}}</div>
     <router-view/>
@@ -17,7 +18,6 @@ export default {
   name: 'App'
 }
 </script>
-
 <style>
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
