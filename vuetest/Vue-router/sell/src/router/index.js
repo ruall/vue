@@ -13,11 +13,25 @@ export default new Router({
     {
       path: '/',
       name: 'HelloWorld',
-      component: HelloWorld
+      component: HelloWorld,
+      alias:'/gohome',
     },
     {
       path:'/params/:newsId(\\d+)/:newsTitle',
       component:Params,
+    },
+    {
+      path:'/goHome',
+      redirect:'/',
+    },
+    {
+      path:'/goParams/:newsId(\\d+)/:newsTitle',
+      redirect:'/params/:newsId(\\d+)/:newsTitle',
+    },
+    {
+      path:'/Hi1',
+      component:Hi1,
+      alias:'/goHi1',
     },
     {
       path:'/hi',
