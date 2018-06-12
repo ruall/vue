@@ -10,6 +10,7 @@
       <router-link to="/goHome">返回首页</router-link>
       <router-link to="/goParams/618/test a ">Params页面2</router-link>
       <router-link to="/goHi1">goHi1页面</router-link>
+      <router-link to="/asdjknajdnakjd">404</router-link>
     </div>
     <div>{{$route.name}}</div>
     <transition name="fade" mode="out-in">

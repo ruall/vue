@@ -5,6 +5,7 @@ import Hi from '@/components/Hi'
 import Hi1 from '@/components/Hi1'
 import Hi2 from '@/components/Hi2'
 import Params from '@/components/params'
+import Error from '@/components/Error'
 
 Vue.use(Router)
 
@@ -17,7 +18,7 @@ export default new Router({
       alias:'/gohome',
     },
     {
-      path:'/params/:newsId(\\d+)/:newsTitle',
+      path:'/params/:newsId(\\d+)/:newsTitle',//通过url传值
       component:Params,
     },
     {
@@ -26,12 +27,12 @@ export default new Router({
     },
     {
       path:'/goParams/:newsId(\\d+)/:newsTitle',
-      redirect:'/params/:newsId(\\d+)/:newsTitle',
+      redirect:'/params/:newsId(\\d+)/:newsTitle',//域名重定向
     },
     {
       path:'/Hi1',
       component:Hi1,
-      alias:'/goHi1',
+      alias:'/goHi1',//alias别名
     },
     {
       path:'/hi',
@@ -42,5 +43,9 @@ export default new Router({
         {path:'Hi2',name:'Hi2',component:Hi2},
       ],
     },
+    {
+      path:'*',
+      component:Error,
+    }
   ]
 })
