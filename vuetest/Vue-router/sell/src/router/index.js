@@ -10,6 +10,7 @@ import Error from '@/components/Error'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'hash',//路由设置，ulr设置
   routes: [
     {
       path: '/',

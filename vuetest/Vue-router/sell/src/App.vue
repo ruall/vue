@@ -11,6 +11,8 @@
       <router-link to="/goParams/618/test a ">Params页面2</router-link>
       <router-link to="/goHi1">goHi1页面</router-link>
       <router-link to="/asdjknajdnakjd">404</router-link>
+      <button @click="goback">后退</button>
+      <button @click="gohome">回首页</button>
     </div>
     <div>{{$route.name}}</div>
     <transition name="fade" mode="out-in">
@@ -21,7 +23,15 @@
 
 <script>
 export default {
-  name: 'App'
+  name: 'App',
+  methods:{
+    goback(){
+      this.$router.go(-1);
+    },
+    gohome(){
+      this.$router.push('/');
+    },
+  },
 }
 </script>
 <style>
