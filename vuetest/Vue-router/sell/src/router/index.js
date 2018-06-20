@@ -5,6 +5,7 @@ import Hi from '@/components/Hi'
 import Hi1 from '@/components/Hi1'
 import Hi2 from '@/components/Hi2'
 import Params from '@/components/params'
+import Error from '@/components/Error'
 import Count from '@/components/count'
 
 Vue.use(Router)
