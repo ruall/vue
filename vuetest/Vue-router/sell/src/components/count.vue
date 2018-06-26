@@ -12,7 +12,7 @@
 
 <script>
   import store from '@/vuex/store';
-  import { mapState,mapMutations } from 'vuex';
+  import { mapState,mapMutations,mapGetters } from 'vuex';
   export default {
     data(){
       return{
@@ -30,7 +30,13 @@
         return state.count;
       }
     }),*/
-    computed:mapState(['count']),
+    computed:{
+      ...mapState(['count']),
+      /*count(){
+        return this.$store.getters.count;
+      }*/
+      ...mapGetters(['count'])
+    },
     methods:mapMutations(['add','reduce']),
     store,
   }
