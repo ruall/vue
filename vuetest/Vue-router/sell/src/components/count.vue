@@ -41,6 +41,7 @@
       ...mapMutations(['add','reduce']),
       ...mapActions(['addAction','reduceAction']),
     },
+
     store,
   }
 </script>
