@@ -10,7 +10,7 @@
               <el-table-column align="center" prop="price" label="金额"></el-table-column>
               <el-table-column align="center" fixed="right" label="操作">
                 <template slot-scope="scope">
-                  <el-button type="text" size="small">删除</el-button>
+                  <el-button type="text" size="small" @click="delSingleGoods(scope.row)">删除</el-button>
                   <el-button type="text" size="small" @click="addOrderList(scope.row)">增加</el-button>
                 </template>
               </el-table-column>
@@ -19,9 +19,9 @@
               数量：<b>{{totalCount}}</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金额：<b>{{totalMoney}}</b>元
             </div>
             <el-row class="order-btn">
-              <el-button type="success" size="small">结账</el-button>
+              <el-button type="success" size="small" @click="checkOut">结账</el-button>
               <el-button type="warning" size="small">挂单</el-button>
-              <el-button type="danger" size="small">删除</el-button>
+              <el-button type="danger" size="small" @click="delAllGoods()">删除</el-button>
             </el-row>
           </el-tab-pane>
           <el-tab-pane label="挂单" name="second">挂单</el-tab-pane>
@@ -131,8 +131,6 @@
     },
     methods:{
       addOrderList(goods){
-        this.totalCount=0;
-        this.totalMoney=0;
         let isHave = false;
         for (let i =0;i<this.tableData.length;i++){
           if(this.tableData[i].goodsId === goods.goodsId){
@@ -146,11 +144,41 @@
           let newGoods={goodsId:goods.goodsId,goodsName:goods.goodsName,price:goods.price,count:1};
           this.tableData.push(newGoods);
         }
-        this.tableData.forEach((element) => {
-          this.totalCount+=element.count;
-          this.totalMoney=this.totalMoney+(element.price*element.count);
-        });
+        this.getAllMoney();
+      },
+      delSingleGoods(goods){
+        this.tableData = this.tableData.filter(o=>o.goodsId !== goods.goodsId);
+        this.getAllMoney();
+      },
+      delAllGoods(){
+        this.tableData = [];
+        this.totalCount = 0;
+        this.totalMoney = 0;
+      },
+      getAllMoney(){
+        this.totalCount=0;
+        this.totalMoney=0;
+        if(this.tableData){
+          this.tableData.forEach((element) => {
+            this.totalCount+=element.count;
+            this.totalMoney=this.totalMoney+(element.price*element.count);
+          });
+        }
+      },
+      checkOut(){
+        if(this.totalCount!==0){
+          this.tableData=[];
+          this.totalCount = 0;
+          this.totalMoney = 0;
+          this.$message({
+            message:'结账成功！',
+            type:'success'
+          });
+        }else{
+          this.$message.error('请先选择商品！')
+        }
       }
+
 
   }
   }
