@@ -76,4 +76,5 @@ console.log(Number.parseFloat(num2)); //123.4
 
 console.log(Number.MAX_SAFE_INTEGER); // 最大安全整数
 console.log(Number.MIN_SAFE_INTEGER); // 最小安全整数
+
 // Number.isSafeInteger 判断是否为安全整数，返回true/false
