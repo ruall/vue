@@ -53,3 +53,15 @@ function boo(first) {
     }
 }
 boo(0, 1, 2, 3, 4, 5);
+
+console.log('------------------');
+
+//字符串模版
+var lin = 'ling';
+var lin1 = 1,
+    lin2 = 2;
+
+var str = '\u6211\u662F' + lin + '\u554A\u554A<b>\u554A\u554A</b>\u554A\u554A' + (lin1 + lin2);
+var str1 = '暗淡觉得年轻大脑看大家l难道就看看啊记得拿见到你安静安徽';
+document.write(str);
+console.log(str1.includes(lin));
