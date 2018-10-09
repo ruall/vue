@@ -50,7 +50,7 @@ console.log(str1.includes(lin)); //查找str1中是否含有lin =>true
 console.log(str1.startsWith(lin)); // 查找str1开头是否含有lin =>false
 console.log(str1.endsWith(lin)); // 查找str1结尾是否含有lin =>true
 let lin3 = '慌/';
-document.write(lin3.repeat(2));
+document.write(lin3.repeat(2));//将lin3复制2次
 
 
 
