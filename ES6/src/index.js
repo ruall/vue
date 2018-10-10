@@ -78,3 +78,66 @@ console.log(Number.MAX_SAFE_INTEGER); // 最大安全整数
 console.log(Number.MIN_SAFE_INTEGER); // 最小安全整数
 
 // Number.isSafeInteger 判断是否为安全整数，返回true/false
+
+
+
+console.log('------------------');
+//ES6数组   json 数组
+
+let json = {
+    '0':'a',
+    '1':'ab',
+    '2':'abc',
+    length:3
+};
+let arr = Array.from(json);
+console.log(arr);
+let arr3 = Array.of(1,2,3,4);
+console.log(arr3);
+let stt = '[1,2,3,4]';
+stt = eval(stt);
+console.log(stt);
+
+
+//find()实例 查找数组中符合条件的元素
+let arr4=[1,2,3,4,5,6,7];
+console.log(arr4.find(function(value,index,arr){
+    return value>6;//查找数组中大于6的数组元素
+}));
+
+
+//fill() 替换数组中的元素内容
+let arr5 = ['萨达很简单','12剋按到家','ID你集散地'];
+arr5.fill('11111',1,2);
+console.log(arr5);
+
+
+//for of 循环数组
+console.log('--------------');
+let arr6 = ['1a蛇年大吉难道就看','暗淡就打开呢1加拿大卡','澳代的2胆囊结石'];
+for(let [index,val] of arr6.entries()){
+    console.log(index+':'+val);
+}
+
+//entries() 实现数组不规则循环
+let arr7 = ['a11192ji1n','1231213asdas','1jeidanskdam'];
+let list = arr7.entries();
+console.log(list.next().value);
+console.log('----------------');
+console.log(list.next().value);
+console.log('~~~~~~~~~~~~~~~~');
+console.log(list.next().value);
+console.log('****************');
+
+
+console.log('~~~~~~~~~~~~~~~~~');
+//箭头函数
+'use strict' //使用严谨模式
+function add(a,b=1) {//给b添加默认值
+    if(a === 0){
+        throw new Error('a is Error');//手动设置抛出异常
+    }
+    return a+b;
+}
+console.log(add(1));
+console.log(add.length);//获取必须传递参数的个数
