@@ -1,0 +1,1886 @@
+@font-face {
+  font-family: 'iconfont';
+  src: url('iconfont/iconfont.eot');
+  src: url('iconfont/iconfont.eot?#iefix') format('embedded-opentype'), url('iconfont/iconfont.woff') format('woff'), url('iconfont/iconfont.ttf') format('truetype'), url('iconfont/iconfont.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-stroke-width: 0.2px;
+  -moz-osx-font-smoothing: grayscale;
+}
+.main {
+  background: #ebeef5;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #ebeef5;
+  overflow: hidden;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+.slider .bodybg {
+  transition: all .3s ease;
+  transform: translateY(0%);
+}
+.hide .bodybg {
+  transition: all .5s ease;
+  transform: translateY(-100%);
+}
+#logincontent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.loaders.loader {
+  box-sizing: border-box;
+  display: flex;
+  flex: 0 1 auto;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: 25%;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  background: #ebeef5;
+  margin: auto;
+  z-index: 10000;
+}
+.pacman > div:first-of-type {
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #1890ff;
+  border-left: 25px solid #1890ff;
+  border-bottom: 25px solid #1890ff;
+  border-radius: 25px;
+  -webkit-animation: rotate_pacman_half_up 0.5s 0s infinite;
+  animation: rotate_pacman_half_up 0.5s 0s infinite;
+}
+.pacman > div:nth-child(2) {
+  -webkit-animation: pacman-balls 1s 0s infinite linear;
+  animation: pacman-balls 1s 0s infinite linear;
+}
+.pacman > div:nth-child(2) {
+  width: 0px;
+  height: 0px;
+  border-right: 25px solid transparent;
+  border-top: 25px solid #1890ff;
+  border-left: 25px solid #1890ff;
+  border-bottom: 25px solid #1890ff;
+  border-radius: 25px;
+  -webkit-animation: rotate_pacman_half_down 0.5s 0s infinite;
+  animation: rotate_pacman_half_down 0.5s 0s infinite;
+  margin-top: -50px;
+}
+.pacman > div:nth-child(3) {
+  -webkit-animation: pacman-balls 1s 0.33s infinite linear;
+  animation: pacman-balls 1s 0.33s infinite linear;
+}
+.pacman > div:nth-child(3),
+.pacman > div:nth-child(4),
+.pacman > div:nth-child(5),
+.pacman > div:nth-child(6) {
+  background-color: #1890ff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  -webkit-transform: translate(0, -6.25px);
+  -ms-transform: translate(0, -6.25px);
+  transform: translate(0, -6.25px);
+  top: 25px;
+  left: 100px;
+}
+.pacman > div:nth-child(4) {
+  -webkit-animation: pacman-balls 1s 0.66s infinite linear;
+  animation: pacman-balls 1s 0.66s infinite linear;
+}
+.pacman > div:nth-child(3),
+.pacman > div:nth-child(4),
+.pacman > div:nth-child(5),
+.pacman > div:nth-child(6) {
+  background-color: #1890ff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  -webkit-transform: translate(0, -6.25px);
+  -ms-transform: translate(0, -6.25px);
+  transform: translate(0, -6.25px);
+  top: 25px;
+  left: 100px;
+}
+.pacman > div:nth-child(5) {
+  -webkit-animation: pacman-balls 1s 0.99s infinite linear;
+  animation: pacman-balls 1s 0.99s infinite linear;
+}
+.pacman > div:nth-child(3),
+.pacman > div:nth-child(4),
+.pacman > div:nth-child(5),
+.pacman > div:nth-child(6) {
+  background-color: #1890ff;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin: 2px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  -webkit-transform: translate(0, -6.25px);
+  -ms-transform: translate(0, -6.25px);
+  transform: translate(0, -6.25px);
+  top: 25px;
+  left: 100px;
+}
+.pacman {
+  position: relative;
+}
+@-webkit-keyframes pacman-balls {
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: translate(-100px, -6.25px);
+    transform: translate(-100px, -6.25px);
+  }
+}
+@keyframes pacman-balls {
+  75% {
+    opacity: 0.7;
+  }
+  100% {
+    -webkit-transform: translate(-100px, -6.25px);
+    transform: translate(-100px, -6.25px);
+  }
+}
+@-webkit-keyframes rotate_pacman_half_up {
+  0% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+@keyframes rotate_pacman_half_up {
+  0% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+  50% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+    transform: rotate(270deg);
+  }
+}
+@-webkit-keyframes rotate_pacman_half_down {
+  0% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+@keyframes rotate_pacman_half_down {
+  0% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+  50% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+  }
+}
+body {
+  background: #fff;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+form,
+fieldset,
+legend,
+button,
+input,
+textarea,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+img,
+input,
+select {
+  vertical-align: middle;
+}
+body,
+button,
+input,
+select,
+textarea,
+p,
+span {
+  font: 14px/1.5 tahoma, arial, Microsoft Yahei, sans-serif;
+  color: #303133;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: courier new, courier, monospace;
+}
+small {
+  font-size: 14px;
+}
+ul,
+ol {
+  list-style: none;
+}
+i {
+  font-style: normal;
+}
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+sup {
+  vertical-align: text-top;
+}
+sub {
+  vertical-align: text-bottom;
+}
+legend {
+  color: #000;
+}
+fieldset,
+img {
+  border: 0;
+}
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+}
+input,
+select {
+  vertical-align: middle;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.mt10 {
+  margin-top: 10px;
+}
+.mt20 {
+  margin-top: 20px;
+}
+.mt12 {
+  margin-top: 12px;
+}
+.mt15 {
+  margin-top: 15px;
+}
+.mb10 {
+  margin-bottom: 10px;
+}
+.ml10 {
+  margin-left: 10px;
+}
+.mr10 {
+  margin-right: 10px;
+}
+.rel {
+  position: relative;
+}
+.w1030 {
+  margin: 0 auto;
+  width: 1030px;
+  height: 100%;
+  display: block;
+}
+.fl-l {
+  float: left;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+.main {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  height: 100%;
+  overflow: hidden;
+  display: block;
+}
+.clearfix:after {
+  content: ".";
+  display: block ;
+  height: 0 ;
+  clear: both ;
+  visibility: hidden ;
+}
+input {
+  display: inline-block;
+  border: none;
+}
+.block {
+  display: block;
+  overflow: hidden;
+}
+.flex {
+  display: flex;
+  width: 100%;
+}
+.editcps {
+  flex: 1;
+  position: relative;
+}
+.bodybg {
+  background: #fff;
+}
+.scrollmask {
+  width: 100%;
+  height: 100%;
+}
+.scrollstyle::-webkit-scrollbar-track-piece {
+  background-color: #f8f8f8;
+}
+.scrollstyle::-webkit-scrollbar-thumb {
+  background-color: #1890ff;
+  background-clip: padding-box;
+  min-height: 28px;
+}
+.scrollstyle::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+.scrollwidth1::-webkit-scrollbar {
+  height: 1px;
+  width: 0px;
+}
+.templatescrollstyle::-webkit-scrollbar {
+  width: 3px;
+  height: 9px;
+}
+.flex-wrap {
+  flex-flow: row wrap;
+}
+.el-color-dropdown__link-btn {
+  padding: 0;
+  height: 25px;
+  border: 1px solid #dcdcdc;
+  padding: 0 15px;
+  background: none;
+  margin-right: 5px;
+}
+#triangle {
+  height: 0;
+  width: 0;
+  border-right: 50px solid transparent;
+  border-bottom: 50px solid #606266;
+  border-left: 50px solid transparent;
+}
+.ui-resizable-ne {
+  cursor: ne-resize;
+  width: 5px;
+  height: 5px;
+  right: -2px;
+  top: -2px;
+}
+.ui-resizable-handle {
+  position: absolute;
+  font-size: 0.1px;
+  display: block;
+  -ms-touch-action: none;
+  touch-action: none;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background-color: #ffffff;
+  border: 1px solid #1890ff;
+}
+.ui-resizable-n {
+  cursor: n-resize;
+  left: 0;
+  right: 0;
+  top: -4px;
+  margin: auto;
+  display: none !important;
+}
+.ui-resizable-s {
+  cursor: s-resize;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+li .ui-resizable-s {
+  display: block !important;
+}
+li a .ui-resizable-s {
+  display: none !important;
+}
+li.addtonglan .ui-resizable-s {
+  display: none !important;
+}
+li.articlebg .ui-resizable-s {
+  display: none !important;
+}
+li.articlebg {
+  background: #e4e7ed !important;
+}
+.ui-resizable-e {
+  cursor: e-resize;
+  right: -4px;
+  top: 0;
+  bottom: 0;
+  display: none !important;
+  margin: auto;
+}
+.ui-resizable-w {
+  cursor: w-resize;
+  left: -4px;
+  top: 0;
+  bottom: 0;
+  display: none !important;
+  margin: auto;
+}
+.ui-resizable-ne {
+  cursor: ne-resize;
+  right: -2px;
+  top: -2px;
+  display: none !important;
+}
+.ui-resizable-sw {
+  cursor: sw-resize;
+  left: -2px;
+  bottom: -2px;
+  display: none !important;
+}
+.ui-resizable-se {
+  cursor: se-resize;
+  right: -2px;
+  bottom: -2px;
+  display: none !important;
+}
+.ui-resizable-nw {
+  cursor: nw-resize;
+  left: -2px;
+  display: none !important;
+  top: -2px;
+}
+.el-input__inner {
+  padding: 0 5px !important;
+}
+a.activebtn .ui-resizable-handle {
+  display: block !important;
+}
+.btncps,
+.controlcps,
+.piccps,
+.textcps,
+.containercps,
+.bgcps,
+.titlecps,
+.TopNavcps,
+.BottomNavcps,
+.videocps,
+.mapcps,
+.msgcps,
+.searchcps,
+.cubecps,
+.swipercps,
+.articlecps {
+  width: 100%;
+  overflow: hidden;
+}
+.btncps.style_select,
+.controlcps.style_select,
+.piccps.style_select,
+.textcps.style_select,
+.containercps.style_select,
+.bgcps.style_select,
+.titlecps.style_select,
+.TopNavcps.style_select,
+.BottomNavcps.style_select,
+.videocps.style_select,
+.mapcps.style_select,
+.msgcps.style_select,
+.searchcps.style_select,
+.cubecps.style_select,
+.swipercps.style_select,
+.articlecps.style_select {
+  height: 100%;
+  z-index: 1000;
+  width: 100%;
+  max-width: 400px;
+  transform: translateX(100%);
+  transition: all .3s ease 0s;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  right: 0;
+}
+.btncps .selectbtn,
+.controlcps .selectbtn,
+.piccps .selectbtn,
+.textcps .selectbtn,
+.containercps .selectbtn,
+.bgcps .selectbtn,
+.titlecps .selectbtn,
+.TopNavcps .selectbtn,
+.BottomNavcps .selectbtn,
+.videocps .selectbtn,
+.mapcps .selectbtn,
+.msgcps .selectbtn,
+.searchcps .selectbtn,
+.cubecps .selectbtn,
+.swipercps .selectbtn,
+.articlecps .selectbtn {
+  width: 100%;
+}
+.btncps .selectbtn p,
+.controlcps .selectbtn p,
+.piccps .selectbtn p,
+.textcps .selectbtn p,
+.containercps .selectbtn p,
+.bgcps .selectbtn p,
+.titlecps .selectbtn p,
+.TopNavcps .selectbtn p,
+.BottomNavcps .selectbtn p,
+.videocps .selectbtn p,
+.mapcps .selectbtn p,
+.msgcps .selectbtn p,
+.searchcps .selectbtn p,
+.cubecps .selectbtn p,
+.swipercps .selectbtn p,
+.articlecps .selectbtn p {
+  line-height: 20px;
+  font-size: 14px;
+  padding-left: 20px;
+  margin-top: 15px;
+}
+.btncps .slidersel,
+.controlcps .slidersel,
+.piccps .slidersel,
+.textcps .slidersel,
+.containercps .slidersel,
+.bgcps .slidersel,
+.titlecps .slidersel,
+.TopNavcps .slidersel,
+.BottomNavcps .slidersel,
+.videocps .slidersel,
+.mapcps .slidersel,
+.msgcps .slidersel,
+.searchcps .slidersel,
+.cubecps .slidersel,
+.swipercps .slidersel,
+.articlecps .slidersel {
+  width: 320px;
+  height: 30px;
+  float: right;
+  position: relative;
+  top: -3px;
+}
+.btncps .el-slider__input,
+.controlcps .el-slider__input,
+.piccps .el-slider__input,
+.textcps .el-slider__input,
+.containercps .el-slider__input,
+.bgcps .el-slider__input,
+.titlecps .el-slider__input,
+.TopNavcps .el-slider__input,
+.BottomNavcps .el-slider__input,
+.videocps .el-slider__input,
+.mapcps .el-slider__input,
+.msgcps .el-slider__input,
+.searchcps .el-slider__input,
+.cubecps .el-slider__input,
+.swipercps .el-slider__input,
+.articlecps .el-slider__input {
+  width: 100px;
+  margin-right: 30px;
+}
+.btncps .el-slider__input .el-input-number__increase,
+.controlcps .el-slider__input .el-input-number__increase,
+.piccps .el-slider__input .el-input-number__increase,
+.textcps .el-slider__input .el-input-number__increase,
+.containercps .el-slider__input .el-input-number__increase,
+.bgcps .el-slider__input .el-input-number__increase,
+.titlecps .el-slider__input .el-input-number__increase,
+.TopNavcps .el-slider__input .el-input-number__increase,
+.BottomNavcps .el-slider__input .el-input-number__increase,
+.videocps .el-slider__input .el-input-number__increase,
+.mapcps .el-slider__input .el-input-number__increase,
+.msgcps .el-slider__input .el-input-number__increase,
+.searchcps .el-slider__input .el-input-number__increase,
+.cubecps .el-slider__input .el-input-number__increase,
+.swipercps .el-slider__input .el-input-number__increase,
+.articlecps .el-slider__input .el-input-number__increase {
+  line-height: 30px;
+  top: 2px;
+  padding: 0 !important;
+}
+.btncps .el-slider__input .el-input-number__decrease,
+.controlcps .el-slider__input .el-input-number__decrease,
+.piccps .el-slider__input .el-input-number__decrease,
+.textcps .el-slider__input .el-input-number__decrease,
+.containercps .el-slider__input .el-input-number__decrease,
+.bgcps .el-slider__input .el-input-number__decrease,
+.titlecps .el-slider__input .el-input-number__decrease,
+.TopNavcps .el-slider__input .el-input-number__decrease,
+.BottomNavcps .el-slider__input .el-input-number__decrease,
+.videocps .el-slider__input .el-input-number__decrease,
+.mapcps .el-slider__input .el-input-number__decrease,
+.msgcps .el-slider__input .el-input-number__decrease,
+.searchcps .el-slider__input .el-input-number__decrease,
+.cubecps .el-slider__input .el-input-number__decrease,
+.swipercps .el-slider__input .el-input-number__decrease,
+.articlecps .el-slider__input .el-input-number__decrease {
+  line-height: 30px;
+  top: 2px;
+  padding: 0 !important;
+}
+.btncps .btnlink .el-select.el-select--small,
+.controlcps .btnlink .el-select.el-select--small,
+.piccps .btnlink .el-select.el-select--small,
+.textcps .btnlink .el-select.el-select--small,
+.containercps .btnlink .el-select.el-select--small,
+.bgcps .btnlink .el-select.el-select--small,
+.titlecps .btnlink .el-select.el-select--small,
+.TopNavcps .btnlink .el-select.el-select--small,
+.BottomNavcps .btnlink .el-select.el-select--small,
+.videocps .btnlink .el-select.el-select--small,
+.mapcps .btnlink .el-select.el-select--small,
+.msgcps .btnlink .el-select.el-select--small,
+.searchcps .btnlink .el-select.el-select--small,
+.cubecps .btnlink .el-select.el-select--small,
+.swipercps .btnlink .el-select.el-select--small,
+.articlecps .btnlink .el-select.el-select--small {
+  width: 120px;
+}
+.btncps .setbtnbg,
+.controlcps .setbtnbg,
+.piccps .setbtnbg,
+.textcps .setbtnbg,
+.containercps .setbtnbg,
+.bgcps .setbtnbg,
+.titlecps .setbtnbg,
+.TopNavcps .setbtnbg,
+.BottomNavcps .setbtnbg,
+.videocps .setbtnbg,
+.mapcps .setbtnbg,
+.msgcps .setbtnbg,
+.searchcps .setbtnbg,
+.cubecps .setbtnbg,
+.swipercps .setbtnbg,
+.articlecps .setbtnbg {
+  color: #1890ff;
+  font-size: 12px;
+  cursor: pointer;
+  line-height: 30px;
+  padding-left: 10px;
+}
+.btncps .input1,
+.controlcps .input1,
+.piccps .input1,
+.textcps .input1,
+.containercps .input1,
+.bgcps .input1,
+.titlecps .input1,
+.TopNavcps .input1,
+.BottomNavcps .input1,
+.videocps .input1,
+.mapcps .input1,
+.msgcps .input1,
+.searchcps .input1,
+.cubecps .input1,
+.swipercps .input1,
+.articlecps .input1 {
+  width: 70%;
+}
+.btncps .widthinput,
+.controlcps .widthinput,
+.piccps .widthinput,
+.textcps .widthinput,
+.containercps .widthinput,
+.bgcps .widthinput,
+.titlecps .widthinput,
+.TopNavcps .widthinput,
+.BottomNavcps .widthinput,
+.videocps .widthinput,
+.mapcps .widthinput,
+.msgcps .widthinput,
+.searchcps .widthinput,
+.cubecps .widthinput,
+.swipercps .widthinput,
+.articlecps .widthinput {
+  width: 70px;
+}
+.btncps .heightinput,
+.controlcps .heightinput,
+.piccps .heightinput,
+.textcps .heightinput,
+.containercps .heightinput,
+.bgcps .heightinput,
+.titlecps .heightinput,
+.TopNavcps .heightinput,
+.BottomNavcps .heightinput,
+.videocps .heightinput,
+.mapcps .heightinput,
+.msgcps .heightinput,
+.searchcps .heightinput,
+.cubecps .heightinput,
+.swipercps .heightinput,
+.articlecps .heightinput {
+  width: 70px;
+}
+.btncps .el-select.el-select--small,
+.controlcps .el-select.el-select--small,
+.piccps .el-select.el-select--small,
+.textcps .el-select.el-select--small,
+.containercps .el-select.el-select--small,
+.bgcps .el-select.el-select--small,
+.titlecps .el-select.el-select--small,
+.TopNavcps .el-select.el-select--small,
+.BottomNavcps .el-select.el-select--small,
+.videocps .el-select.el-select--small,
+.mapcps .el-select.el-select--small,
+.msgcps .el-select.el-select--small,
+.searchcps .el-select.el-select--small,
+.cubecps .el-select.el-select--small,
+.swipercps .el-select.el-select--small,
+.articlecps .el-select.el-select--small {
+  width: 95px;
+}
+.btncps .btn,
+.controlcps .btn,
+.piccps .btn,
+.textcps .btn,
+.containercps .btn,
+.bgcps .btn,
+.titlecps .btn,
+.TopNavcps .btn,
+.BottomNavcps .btn,
+.videocps .btn,
+.mapcps .btn,
+.msgcps .btn,
+.searchcps .btn,
+.cubecps .btn,
+.swipercps .btn,
+.articlecps .btn {
+  width: 20px;
+  height: 30px;
+  cursor: pointer;
+  display: block;
+  float: left;
+  margin-top: 28px;
+  transition: all 0.3s ease;
+  margin: 28px 10px;
+}
+.btncps .btn.prevpage,
+.controlcps .btn.prevpage,
+.piccps .btn.prevpage,
+.textcps .btn.prevpage,
+.containercps .btn.prevpage,
+.bgcps .btn.prevpage,
+.titlecps .btn.prevpage,
+.TopNavcps .btn.prevpage,
+.BottomNavcps .btn.prevpage,
+.videocps .btn.prevpage,
+.mapcps .btn.prevpage,
+.msgcps .btn.prevpage,
+.searchcps .btn.prevpage,
+.cubecps .btn.prevpage,
+.swipercps .btn.prevpage,
+.articlecps .btn.prevpage {
+  background: url('/client/assets/images/sprites.png') no-repeat;
+  background-position: -612px -95px;
+}
+.btncps .btn.prevpage:hover,
+.controlcps .btn.prevpage:hover,
+.piccps .btn.prevpage:hover,
+.textcps .btn.prevpage:hover,
+.containercps .btn.prevpage:hover,
+.bgcps .btn.prevpage:hover,
+.titlecps .btn.prevpage:hover,
+.TopNavcps .btn.prevpage:hover,
+.BottomNavcps .btn.prevpage:hover,
+.videocps .btn.prevpage:hover,
+.mapcps .btn.prevpage:hover,
+.msgcps .btn.prevpage:hover,
+.searchcps .btn.prevpage:hover,
+.cubecps .btn.prevpage:hover,
+.swipercps .btn.prevpage:hover,
+.articlecps .btn.prevpage:hover {
+  background-position: -646px -95px;
+}
+.btncps .btn.nextpage,
+.controlcps .btn.nextpage,
+.piccps .btn.nextpage,
+.textcps .btn.nextpage,
+.containercps .btn.nextpage,
+.bgcps .btn.nextpage,
+.titlecps .btn.nextpage,
+.TopNavcps .btn.nextpage,
+.BottomNavcps .btn.nextpage,
+.videocps .btn.nextpage,
+.mapcps .btn.nextpage,
+.msgcps .btn.nextpage,
+.searchcps .btn.nextpage,
+.cubecps .btn.nextpage,
+.swipercps .btn.nextpage,
+.articlecps .btn.nextpage {
+  background: url('/client/assets/images/sprites.png') no-repeat;
+  background-position: -709px -94px;
+}
+.btncps .btn.nextpage:hover,
+.controlcps .btn.nextpage:hover,
+.piccps .btn.nextpage:hover,
+.textcps .btn.nextpage:hover,
+.containercps .btn.nextpage:hover,
+.bgcps .btn.nextpage:hover,
+.titlecps .btn.nextpage:hover,
+.TopNavcps .btn.nextpage:hover,
+.BottomNavcps .btn.nextpage:hover,
+.videocps .btn.nextpage:hover,
+.mapcps .btn.nextpage:hover,
+.msgcps .btn.nextpage:hover,
+.searchcps .btn.nextpage:hover,
+.cubecps .btn.nextpage:hover,
+.swipercps .btn.nextpage:hover,
+.articlecps .btn.nextpage:hover {
+  background-position: -675px -94px;
+}
+.btncps .selbtn,
+.controlcps .selbtn,
+.piccps .selbtn,
+.textcps .selbtn,
+.containercps .selbtn,
+.bgcps .selbtn,
+.titlecps .selbtn,
+.TopNavcps .selbtn,
+.BottomNavcps .selbtn,
+.videocps .selbtn,
+.mapcps .selbtn,
+.msgcps .selbtn,
+.searchcps .selbtn,
+.cubecps .selbtn,
+.swipercps .selbtn,
+.articlecps .selbtn {
+  width: 80%;
+  float: left;
+  overflow: hidden;
+}
+.btncps .selbtn ul,
+.controlcps .selbtn ul,
+.piccps .selbtn ul,
+.textcps .selbtn ul,
+.containercps .selbtn ul,
+.bgcps .selbtn ul,
+.titlecps .selbtn ul,
+.TopNavcps .selbtn ul,
+.BottomNavcps .selbtn ul,
+.videocps .selbtn ul,
+.mapcps .selbtn ul,
+.msgcps .selbtn ul,
+.searchcps .selbtn ul,
+.cubecps .selbtn ul,
+.swipercps .selbtn ul,
+.articlecps .selbtn ul {
+  width: 650px;
+  height: 66px;
+  margin: 10px auto;
+  transition: all .3s ease 0s;
+  transform: translate3d(0, 0, 0);
+}
+.btncps .selbtn ul.nextpage,
+.controlcps .selbtn ul.nextpage,
+.piccps .selbtn ul.nextpage,
+.textcps .selbtn ul.nextpage,
+.containercps .selbtn ul.nextpage,
+.bgcps .selbtn ul.nextpage,
+.titlecps .selbtn ul.nextpage,
+.TopNavcps .selbtn ul.nextpage,
+.BottomNavcps .selbtn ul.nextpage,
+.videocps .selbtn ul.nextpage,
+.mapcps .selbtn ul.nextpage,
+.msgcps .selbtn ul.nextpage,
+.searchcps .selbtn ul.nextpage,
+.cubecps .selbtn ul.nextpage,
+.swipercps .selbtn ul.nextpage,
+.articlecps .selbtn ul.nextpage {
+  transform: translate3d(-326px, 0, 0);
+}
+.btncps .selbtn li,
+.controlcps .selbtn li,
+.piccps .selbtn li,
+.textcps .selbtn li,
+.containercps .selbtn li,
+.bgcps .selbtn li,
+.titlecps .selbtn li,
+.TopNavcps .selbtn li,
+.BottomNavcps .selbtn li,
+.videocps .selbtn li,
+.mapcps .selbtn li,
+.msgcps .selbtn li,
+.searchcps .selbtn li,
+.cubecps .selbtn li,
+.swipercps .selbtn li,
+.articlecps .selbtn li {
+  float: left;
+  width: 140px;
+  cursor: pointer;
+  height: 100%;
+  border: 1px solid #dcdfe6;
+  margin: 0 10px;
+}
+.btncps .selbtn li a,
+.controlcps .selbtn li a,
+.piccps .selbtn li a,
+.textcps .selbtn li a,
+.containercps .selbtn li a,
+.bgcps .selbtn li a,
+.titlecps .selbtn li a,
+.TopNavcps .selbtn li a,
+.BottomNavcps .selbtn li a,
+.videocps .selbtn li a,
+.mapcps .selbtn li a,
+.msgcps .selbtn li a,
+.searchcps .selbtn li a,
+.cubecps .selbtn li a,
+.swipercps .selbtn li a,
+.articlecps .selbtn li a {
+  display: block;
+  text-align: center;
+  width: 100px;
+  border: 1px solid #d8dce6;
+  height: 30px;
+  line-height: 30px;
+  margin: 18px auto;
+  background: #fff;
+  font-size: 14px;
+  color: #fff;
+  border-radius: 4px;
+}
+.btncps .selbtn li a.btn1,
+.controlcps .selbtn li a.btn1,
+.piccps .selbtn li a.btn1,
+.textcps .selbtn li a.btn1,
+.containercps .selbtn li a.btn1,
+.bgcps .selbtn li a.btn1,
+.titlecps .selbtn li a.btn1,
+.TopNavcps .selbtn li a.btn1,
+.BottomNavcps .selbtn li a.btn1,
+.videocps .selbtn li a.btn1,
+.mapcps .selbtn li a.btn1,
+.msgcps .selbtn li a.btn1,
+.searchcps .selbtn li a.btn1,
+.cubecps .selbtn li a.btn1,
+.swipercps .selbtn li a.btn1,
+.articlecps .selbtn li a.btn1 {
+  background: #c0c4cc;
+  border: 1px solid #c0c4cc;
+}
+.btncps .selbtn li a.btn2,
+.controlcps .selbtn li a.btn2,
+.piccps .selbtn li a.btn2,
+.textcps .selbtn li a.btn2,
+.containercps .selbtn li a.btn2,
+.bgcps .selbtn li a.btn2,
+.titlecps .selbtn li a.btn2,
+.TopNavcps .selbtn li a.btn2,
+.BottomNavcps .selbtn li a.btn2,
+.videocps .selbtn li a.btn2,
+.mapcps .selbtn li a.btn2,
+.msgcps .selbtn li a.btn2,
+.searchcps .selbtn li a.btn2,
+.cubecps .selbtn li a.btn2,
+.swipercps .selbtn li a.btn2,
+.articlecps .selbtn li a.btn2 {
+  background: #fff;
+  color: #d8dce6;
+}
+.btncps .selbtn li a.btn3,
+.controlcps .selbtn li a.btn3,
+.piccps .selbtn li a.btn3,
+.textcps .selbtn li a.btn3,
+.containercps .selbtn li a.btn3,
+.bgcps .selbtn li a.btn3,
+.titlecps .selbtn li a.btn3,
+.TopNavcps .selbtn li a.btn3,
+.BottomNavcps .selbtn li a.btn3,
+.videocps .selbtn li a.btn3,
+.mapcps .selbtn li a.btn3,
+.msgcps .selbtn li a.btn3,
+.searchcps .selbtn li a.btn3,
+.cubecps .selbtn li a.btn3,
+.swipercps .selbtn li a.btn3,
+.articlecps .selbtn li a.btn3 {
+  background: #c0c4cc;
+  border: 1px solid #c0c4cc;
+  border-radius: 20px;
+}
+.btncps .selbtn li a.btn4,
+.controlcps .selbtn li a.btn4,
+.piccps .selbtn li a.btn4,
+.textcps .selbtn li a.btn4,
+.containercps .selbtn li a.btn4,
+.bgcps .selbtn li a.btn4,
+.titlecps .selbtn li a.btn4,
+.TopNavcps .selbtn li a.btn4,
+.BottomNavcps .selbtn li a.btn4,
+.videocps .selbtn li a.btn4,
+.mapcps .selbtn li a.btn4,
+.msgcps .selbtn li a.btn4,
+.searchcps .selbtn li a.btn4,
+.cubecps .selbtn li a.btn4,
+.swipercps .selbtn li a.btn4,
+.articlecps .selbtn li a.btn4 {
+  background: #fff;
+  border-radius: 20px;
+  color: #d8dce6;
+}
+.btncps .selbtn li.active,
+.controlcps .selbtn li.active,
+.piccps .selbtn li.active,
+.textcps .selbtn li.active,
+.containercps .selbtn li.active,
+.bgcps .selbtn li.active,
+.titlecps .selbtn li.active,
+.TopNavcps .selbtn li.active,
+.BottomNavcps .selbtn li.active,
+.videocps .selbtn li.active,
+.mapcps .selbtn li.active,
+.msgcps .selbtn li.active,
+.searchcps .selbtn li.active,
+.cubecps .selbtn li.active,
+.swipercps .selbtn li.active,
+.articlecps .selbtn li.active {
+  border: 1px solid #1890ff;
+}
+.btncps ul.btnchangestyle,
+.controlcps ul.btnchangestyle,
+.piccps ul.btnchangestyle,
+.textcps ul.btnchangestyle,
+.containercps ul.btnchangestyle,
+.bgcps ul.btnchangestyle,
+.titlecps ul.btnchangestyle,
+.TopNavcps ul.btnchangestyle,
+.BottomNavcps ul.btnchangestyle,
+.videocps ul.btnchangestyle,
+.mapcps ul.btnchangestyle,
+.msgcps ul.btnchangestyle,
+.searchcps ul.btnchangestyle,
+.cubecps ul.btnchangestyle,
+.swipercps ul.btnchangestyle,
+.articlecps ul.btnchangestyle {
+  width: 100%;
+  margin-top: 10px;
+}
+.btncps ul.btnchangestyle li,
+.controlcps ul.btnchangestyle li,
+.piccps ul.btnchangestyle li,
+.textcps ul.btnchangestyle li,
+.containercps ul.btnchangestyle li,
+.bgcps ul.btnchangestyle li,
+.titlecps ul.btnchangestyle li,
+.TopNavcps ul.btnchangestyle li,
+.BottomNavcps ul.btnchangestyle li,
+.videocps ul.btnchangestyle li,
+.mapcps ul.btnchangestyle li,
+.msgcps ul.btnchangestyle li,
+.searchcps ul.btnchangestyle li,
+.cubecps ul.btnchangestyle li,
+.swipercps ul.btnchangestyle li,
+.articlecps ul.btnchangestyle li {
+  margin: 0px 0 20px;
+  width: 100%;
+  height: 30px;
+  padding-left: 25px;
+  box-sizing: border-box;
+}
+.btncps ul.btnchangestyle li a,
+.controlcps ul.btnchangestyle li a,
+.piccps ul.btnchangestyle li a,
+.textcps ul.btnchangestyle li a,
+.containercps ul.btnchangestyle li a,
+.bgcps ul.btnchangestyle li a,
+.titlecps ul.btnchangestyle li a,
+.TopNavcps ul.btnchangestyle li a,
+.BottomNavcps ul.btnchangestyle li a,
+.videocps ul.btnchangestyle li a,
+.mapcps ul.btnchangestyle li a,
+.msgcps ul.btnchangestyle li a,
+.searchcps ul.btnchangestyle li a,
+.cubecps ul.btnchangestyle li a,
+.swipercps ul.btnchangestyle li a,
+.articlecps ul.btnchangestyle li a {
+  line-height: 30px;
+  padding: 0 15px 0 0px;
+}
+.btncps .stylename,
+.controlcps .stylename,
+.piccps .stylename,
+.textcps .stylename,
+.containercps .stylename,
+.bgcps .stylename,
+.titlecps .stylename,
+.TopNavcps .stylename,
+.BottomNavcps .stylename,
+.videocps .stylename,
+.mapcps .stylename,
+.msgcps .stylename,
+.searchcps .stylename,
+.cubecps .stylename,
+.swipercps .stylename,
+.articlecps .stylename {
+  width: 100%;
+  border-bottom: 1px solid #eceef2;
+  height: 40px;
+  line-height: 40px;
+  color: #333;
+  font-size: 14px;
+  background: #fff;
+  text-align: center;
+}
+.btncps .colorspan,
+.controlcps .colorspan,
+.piccps .colorspan,
+.textcps .colorspan,
+.containercps .colorspan,
+.bgcps .colorspan,
+.titlecps .colorspan,
+.TopNavcps .colorspan,
+.BottomNavcps .colorspan,
+.videocps .colorspan,
+.mapcps .colorspan,
+.msgcps .colorspan,
+.searchcps .colorspan,
+.cubecps .colorspan,
+.swipercps .colorspan,
+.articlecps .colorspan {
+  width: 140px;
+  height: 30px;
+  border: 1px solid #eceef2;
+  border-left: none;
+  margin-left: -2px;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  display: inline-block;
+  text-align: center;
+  float: right;
+  line-height: 29px;
+  position: relative;
+  color: #333;
+  font-size: 12px;
+}
+.btncps .el-color-picker--small .el-color-picker__trigger,
+.controlcps .el-color-picker--small .el-color-picker__trigger,
+.piccps .el-color-picker--small .el-color-picker__trigger,
+.textcps .el-color-picker--small .el-color-picker__trigger,
+.containercps .el-color-picker--small .el-color-picker__trigger,
+.bgcps .el-color-picker--small .el-color-picker__trigger,
+.titlecps .el-color-picker--small .el-color-picker__trigger,
+.TopNavcps .el-color-picker--small .el-color-picker__trigger,
+.BottomNavcps .el-color-picker--small .el-color-picker__trigger,
+.videocps .el-color-picker--small .el-color-picker__trigger,
+.mapcps .el-color-picker--small .el-color-picker__trigger,
+.msgcps .el-color-picker--small .el-color-picker__trigger,
+.searchcps .el-color-picker--small .el-color-picker__trigger,
+.cubecps .el-color-picker--small .el-color-picker__trigger,
+.swipercps .el-color-picker--small .el-color-picker__trigger,
+.articlecps .el-color-picker--small .el-color-picker__trigger {
+  height: 30px;
+  width: 30px;
+}
+.btncps ul.btnchangestyle li span.el-color-picker__icon,
+.controlcps ul.btnchangestyle li span.el-color-picker__icon,
+.piccps ul.btnchangestyle li span.el-color-picker__icon,
+.textcps ul.btnchangestyle li span.el-color-picker__icon,
+.containercps ul.btnchangestyle li span.el-color-picker__icon,
+.bgcps ul.btnchangestyle li span.el-color-picker__icon,
+.titlecps ul.btnchangestyle li span.el-color-picker__icon,
+.TopNavcps ul.btnchangestyle li span.el-color-picker__icon,
+.BottomNavcps ul.btnchangestyle li span.el-color-picker__icon,
+.videocps ul.btnchangestyle li span.el-color-picker__icon,
+.mapcps ul.btnchangestyle li span.el-color-picker__icon,
+.msgcps ul.btnchangestyle li span.el-color-picker__icon,
+.searchcps ul.btnchangestyle li span.el-color-picker__icon,
+.cubecps ul.btnchangestyle li span.el-color-picker__icon,
+.swipercps ul.btnchangestyle li span.el-color-picker__icon,
+.articlecps ul.btnchangestyle li span.el-color-picker__icon {
+  padding: 0;
+}
+.pdr0 {
+  padding-right: 0px !important;
+}
+.el-color-picker__color {
+  border: none !important;
+}
+.ishome {
+  cursor: not-allowed !important;
+  opacity: .5;
+}
+.msg1 {
+  width: 100%;
+  background: #fff;
+  padding: 0 10px 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+.msg1 nav {
+  width: 100%;
+}
+.msg1 nav p {
+  width: 100%;
+  position: relative;
+  transition: all 0.3s ease;
+}
+.msg1 nav p span {
+  color: #4d4d4d;
+  font-size: 14px;
+  line-height: 40px;
+  width: 50px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+.msg1 nav p .el-input--small input {
+  height: 40px;
+  transition: all 0.3s ease;
+}
+.msg1 nav p.textareacon {
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+.msg1 nav p .el-textarea.el-input--small {
+  box-sizing: border-box;
+  width: 100% !important;
+  transition: all 0.3s ease;
+}
+.msg1 nav .sub {
+  transition: all 0.3s ease;
+  width: 100%;
+  padding: 0;
+  margin: 10px 0;
+  color: #fff;
+}
+.msg1 nav .sub span {
+  color: #fff;
+}
+.msg1.msg2 p {
+  margin: 10px 0;
+}
+.msg1.msg2 p span {
+  width: 10%;
+}
+.msg1.msg2 p .el-input--small {
+  float: right;
+  width: 88%;
+}
+.msg1.msg2 p.textareacon {
+  margin-bottom: 40px;
+}
+.msg1.msg2 p .el-textarea.el-input--small {
+  box-sizing: border-box;
+  float: right;
+  width: 88% !important;
+}
+.msg1.msg2 .sub {
+  width: 88%;
+  float: right;
+  margin: 0px 0 10px;
+}
+.msg1.msg3 p {
+  margin: 0px 0 10px;
+}
+.msg1.msg3 p span {
+  width: 10%;
+  position: relative;
+  z-index: 10;
+  left: 10px;
+}
+.msg1.msg3 p .el-input--small {
+  float: right;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+.msg1.msg3 p .el-input--small input {
+  padding-left: 50px !important;
+  box-sizing: border-box;
+  width: 100%;
+}
+.msg1.msg3 p.textareacon {
+  margin-bottom: 40px;
+}
+.msg1.msg3 p.textareacon .el-textarea.el-input--small {
+  box-sizing: border-box;
+  width: 100% !important;
+  float: right;
+}
+.msg1.msg3 p.textareacon .el-textarea.el-input--small textarea {
+  padding-left: 40px !important;
+  line-height: 30px;
+}
+.msg1.msg3 .sub {
+  width: 100%;
+  margin: 0px 0 10px;
+}
+.search {
+  width: 100%;
+  text-align: center;
+  position: relative;
+  border-radius: 20px;
+  padding: 0px 0;
+  cursor: move;
+}
+.search .searchinput {
+  width: 95%;
+  height: 100%;
+  border: none;
+  margin: 0 auto;
+  background: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+}
+.search .searchinput input {
+  background: none !important;
+  text-indent: 20px;
+  border: none;
+  height: 100% !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: inherit;
+}
+.search .searchinput input::-moz-placeholder {
+  color: inherit;
+}
+.search .searchinput input::-webkit-input-placeholder {
+  color: inherit;
+}
+.search .searchinput input:-ms-input-placeholder {
+  color: inherit;
+}
+.search .search_ico {
+  position: absolute;
+  top: 0px;
+  left: 15px;
+  width: 16px;
+  height: 16px;
+  bottom: 0;
+  margin: auto;
+  cursor: pointer;
+  line-height: 17px;
+}
+.search.search2 {
+  border-radius: 0 !important;
+}
+.search.search3 {
+  border-radius: 20px;
+}
+.search.search3 input {
+  text-align: center;
+  text-indent: 20px;
+  margin: auto;
+  width: 100%;
+}
+.search.search3 .search_ico {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: -40px;
+  right: 0;
+  margin: auto;
+}
+.flex-wrap {
+  display: flex !important;
+  flex-wrap: wrap;
+}
+.cubecontent {
+  display: flex !important;
+  width: 100%;
+  flex-wrap: wrap;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 5px 0;
+}
+.cubecontent .cubeimg {
+  cursor: pointer;
+  border: 1px dashed #fff;
+  padding: 5px 0;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+.cubecontent .cubeimg img {
+  display: block;
+  margin: 0 auto 5px;
+  width: 50px;
+  height: 50px;
+}
+.cubecontent .cubeimg span {
+  line-height: 20px;
+  height: 20px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #4d4d4d;
+  font-size: 12px;
+  text-align: center;
+  display: block;
+}
+.cubecontent .cubeimg:hover,
+.cubecontent .cubeimg.active {
+  border: 1px dashed #1890ff;
+}
+.sort1 .cubeimg {
+  width: 23%;
+  margin: 5px 1% 0px;
+}
+.sort2 .cubeimg {
+  width: 31.3333%;
+  margin: 5px 1% 0px;
+}
+.sort3 .cubeimg {
+  width: 18%;
+  margin: 5px 1% 0px;
+}
+.swipercontent {
+  width: 100%;
+  background: #e4e7ed;
+  padding: 5px 0;
+}
+.swipercontent .swiper-pagination {
+  width: 100%;
+  height: 20px;
+}
+.swipercontent .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.swipercontent .swiper-container .swiper-slide {
+  overflow: hidden;
+}
+.swipercontent img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.swipercontent .move {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  z-index: 100;
+  text-align: center;
+  color: #fff;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  display: none;
+  cursor: move;
+}
+.swipercontent:hover .move {
+  display: block;
+}
+.swiper1 {
+  height: 200px;
+}
+.swiper1 .swiper-slide {
+  width: 100%;
+  height: 100% !important;
+}
+.swiper1 .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.swiper1 .swiper-slide span {
+  position: absolute;
+  height: 36px;
+  line-height: 36px;
+  bottom: 0;
+  left: 0;
+  color: #fff;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 0.3);
+  width: 100%;
+  text-indent: 20px;
+  text-align: left;
+}
+.swiper2 {
+  padding: 5px 0;
+  height: 175px  !important;
+  overflow: hidden;
+}
+.swiper2 .swiper-slide {
+  background: #fff;
+  padding: 10px;
+  box-sizing: border-box;
+  height: 155px !important;
+  width: 150px;
+  margin: 10px 0 10px 0px;
+}
+.swiper2 .swiper-slide span {
+  width: 100%;
+  text-align: center;
+  display: block;
+  color: #333;
+  font-size: 12px;
+}
+.swiper2 .swiper-slide img {
+  background: #e4e7ed;
+  display: block;
+  height: 110px;
+  width: 100%;
+  margin-bottom: 7px;
+}
+.swiper3 {
+  width: 100%;
+}
+.swiper3 .widthp {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px 0;
+  background: #e4e7ed;
+  justify-content: center;
+  position: relative;
+  z-index: 10;
+}
+.swiper3 .widthp .sonp {
+  width: 48%;
+  background: #050303;
+  box-sizing: border-box;
+  margin: 0 auto 10px;
+}
+.swiper3 .widthp .sonp .li {
+  padding: 10px 10px 10px 10px;
+  box-sizing: border-box;
+  background: #fff;
+}
+.swiper3 .widthp .sonp .li img {
+  height: 180px;
+  background: #e4e7ed;
+  margin-bottom: 7px;
+}
+.swiper3 .widthp .sonp .li span {
+  width: 100%;
+  text-align: center;
+  display: block;
+  color: #333;
+  font-size: 12px;
+}
+.article1 {
+  overflow: hidden;
+  width: 100%;
+  background: #e4e7ed;
+  position: relative;
+  padding: 0px 0px;
+  box-sizing: border-box;
+}
+.article1 .cont {
+  background: #fff;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  height: 100px;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.article1 p,
+.article1 .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+  line-height: 30px;
+}
+.article1 .articleimg {
+  float: right;
+  width: 80px;
+  height: 80px;
+  background: #e4e7ed;
+  position: absolute;
+  top: 15px;
+  right: 20px;
+}
+.article1 .articleimg img {
+  width: 60px;
+  height: 55px;
+  display: block;
+  margin: 13px auto;
+}
+.article1 span.date {
+  color: #b3b3bb;
+  display: block;
+  line-height: 30px;
+}
+.article2 {
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  padding: 0px;
+  box-sizing: border-box;
+  background: #f4f4f4;
+}
+.article2 .swiper-slide {
+  width: 250px !important;
+  height: 231px;
+  overflow: hidden;
+}
+.article2 .cont {
+  background: #fff;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.article2 p,
+.article2 .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+  line-height: 25px;
+}
+.article2 .articleimages {
+  width: 250px;
+  height: 150px;
+  padding: 10px 10px 0;
+  box-sizing: border-box;
+  background: #fff;
+  position: relative;
+  top: -70px;
+  overflow: hidden;
+  left: 0px;
+}
+.article2 .articleimages .articleimg {
+  height: 100%;
+}
+.article2 .articleimages img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+}
+.article2 .articleco {
+  width: 100%;
+  position: relative;
+  top: 155px;
+  left: 0;
+  height: 70px;
+  background: #fff;
+}
+.article2 span.date {
+  color: #b3b3bb;
+  display: block;
+  line-height: 30px;
+  display: none;
+}
+.article3 {
+  overflow: hidden;
+  width: 100%;
+  background: #e4e7ed;
+  position: relative;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.article3 .cont {
+  background: #fff;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.article3 p,
+.article3 .title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 70%;
+  line-height: 25px;
+}
+.article3 .articleimg {
+  width: 105px;
+  border-radius: 3px;
+  background: #e4e7ed;
+  float: left;
+  margin-left: 10px;
+}
+.article3 .articleimg img {
+  width: 60px;
+  height: 55px;
+  display: block;
+  margin: 13px auto;
+}
+.article3 .articleimages {
+  width: 100%;
+  height: 90px;
+  background: #fff;
+}
+.article3 span.date {
+  color: #b3b3bb;
+  display: block;
+  line-height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.article4 {
+  overflow: hidden;
+  width: 100%;
+  background: #e4e7ed;
+  position: relative;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.article4 .cont {
+  background: #fff;
+  padding: 5px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  margin: 0px auto;
+}
+.article4 p,
+.article4 .title {
+  overflow: hidden;
+  text-overflow: -o-ellipsis-lastline;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  width: 100%;
+  line-height: 30px;
+}
+.article4 .articleimg {
+  display: none;
+}
+.article4 span.date {
+  color: #b3b3bb;
+  display: block;
+  line-height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.boxsizing {
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.arcicle_content {
+  background: #f4f4f4;
+  padding: 5px 0;
+}
+.swiper-container2 .swiper-pagination-bullet {
+  display: none;
+}

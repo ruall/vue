@@ -1,0 +1,21 @@
+{
+    // 使用eslint工具来校验代码    
+    "extends": "standard",
+    "plugins": [
+        "html"
+    ],
+    // 执行webapck操作时候进行eslint处理解
+    "parser":"babel-eslint",
+    "rules":{
+      "no-new":"off",
+      /* 关闭语句强制分号结尾 */
+      "semi": [0],
+      //空行最多不能超过100行
+      "no-multiple-empty-lines": [0, {"max": 100}],
+      //关闭禁止混用tab和空格
+      "no-mixed-spaces-and-tabs": [0]
+    },
+    "globals": {
+      "Swiper": true
+    }
+}

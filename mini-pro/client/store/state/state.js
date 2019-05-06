@@ -1,0 +1,25 @@
+export default {
+  loading: true, // 默认loading状态开启,
+  text: '',
+  datalist: [],
+  miniappId: null,
+  NavigatorSet: null,
+  AllStyle: {themeColorhelp: '#ccc', themeColor: '#ccc', navigatorBackColor: '#ccc', bgColor: '#ccc', bgImg: '#ccc'},
+  supportText: {tt: '由苍鹿提供技术支持', fs: '14', w: '375', bgc: '#ccc', h: '50', co: '#333'},
+  productInfo: {},
+  uploadiconNavigatorSet: false,
+  domZindex: {maxzIndex: 100, minzIndex: 100},
+  uploadiconSrc: {},
+  CurrentPageId: null,
+  CurrentPageInfo: {},
+  IndexPageId: null,
+  AllPageInfo: [],
+  CurrentBGImageUrl: {showUploadimg: false, bgColor: null, bgImg: null, bgupload: false},
+  CurrentCubeImageUrl: null,
+  CurrentSwiperImageUrl: null,
+  Uploadimginfo: {showUploadimg: null, firstUploadCurrentImageUrl: null, CurrentImageUrl: null, idindex: null, firstupload: null, CurrentBGImageUrl: null, bgupload: null, ImgType: null},
+  Imgdomain: 'http://test.image.cangluxmt.com/jcshopimage/',
+  currentPageData: [],
+  // 图片服务器地址
+  imageUrl: 'http://test.image.cangluxmt.com/jcshopimage'
+}

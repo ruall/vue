@@ -1,0 +1,10 @@
+{
+  "presets": [
+    "env",
+    "stage-1"
+  ],
+  "plugins": [
+    "transform-vue-jsx", // 编译jsx
+    "syntax-dynamic-import" // 按需加载包
+  ]
+}
