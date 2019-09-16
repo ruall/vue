@@ -10,23 +10,34 @@
 <div id="app">
   <my-cpn></my-cpn>
   <cpn></cpn>
+  <my-cpn-1></my-cpn-1>
 </div>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+<script src="./vue.js"></script>
 <script>
   /**
-   * 创建组件构造器对象
+   * 创建组件构造器对象（子组件）
    * */
   const cpnC = Vue.extend({
     template: `<div><h2>hello</h2></div>`,
   })
 
   /**
+   * 创建组件构造器对象（父组件）
+   * */
+  const cpnC2 = Vue.extend({
+    template: `<div><h3>你好</h3><cpn1></cpn1></div>`,
+    components: {
+      cpn1: cpnC
+    },
+  })
+  /**
    * 注册组件(全局组件)
    * 可以在多个vue实例下使用
    * */
   Vue.component("my-cpn", cpnC)
+  Vue.component("my-cpn-1", cpnC2)
 
-  const vm = new Vue({
+  const app = new Vue({
     el: "#app",
     data: {
       massage: "hello",

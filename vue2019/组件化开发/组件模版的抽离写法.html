@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<div id="app">
+  <my-cpn></my-cpn>
+</div>
+
+<!-- 1-通过script标签抽离 ，type必须是text/x-template -->
+<!--<script type="text/x-template" id="cpn">
+  <div>
+    <h2>hello complate</h2>
+  </div>
+</script>-->
+
+<!-- 2-通过template标签抽离 -->
+<template id="cpn">
+  <div>
+    <h2>hello complate</h2>
+  </div>
+</template>
+
+<script src="./vue.js"></script>
+<script>
+  Vue.component('my-cpn',{
+    template: '#cpn'
+  })
+
+  const app = new Vue({
+    el:'#app'
+  })
+</script>
+</body>
+</html>
