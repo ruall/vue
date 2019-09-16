@@ -1,41 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>组件化开发的基础使用</title>
 </head>
+
 <body>
-<div id="app">
-  <my-cpn></my-cpn>
-  <cpn></cpn>
-</div>
-<script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
-<script>
-  /**
-   * 创建组件构造器对象
-   * */
-  const cpnC = Vue.extend({
-    template:`<div><h2>hello</h2></div>`,
-  })
+  <div id="app">
+    <my-cpn></my-cpn>
+    <cpn></cpn>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.6.7/dist/vue.js"></script>
+  <script>
+    /**
+     * 创建组件构造器对象
+     * */
+    const cpnC = Vue.extend({
+      template: `<div><h2>hello</h2></div>`,
+    })
 
-  /**
-   * 注册组件(全局组件)
-   * 可以在多个vue实例下使用
-   * */
-  Vue.component('my-cpn',cpnC);
+    /**
+     * 注册组件(全局组件)
+     * 可以在多个vue实例下使用
+     * */
+    Vue.component('my-cpn', cpnC);
 
-  const vm = new Vue({
-    el: "#app",
-    data: {
-      massage:'hello',
-    },
-    components:{
-      /**
-       * 注册局部组件
-       * */
-      'cpn':cpnC
-    },
-  })
-</script>
+    const vm = new Vue({
+      el: "#app",
+      data: {
+        massage: 'hello',
+      },
+      components: {
+        /**
+         * 注册局部组件
+         * */
+        'cpn': cpnC
+      },
+    })
+  </script>
 </body>
+
 </html>
